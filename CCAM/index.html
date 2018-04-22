@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr-FR" debug="true">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>RHAPI.FR</title>
+	
+	<!--=== jQuery ===-->
+	<link rel="stylesheet" href="lib/jquery-ui-1.12.1/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="lib/jquery_3.2.1.js"></script>
+	<script type="text/javascript" src="lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+	
+	<!--=== Bootstrap ===-->
+	<!--<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+	<!--<link href="bootstrap/css/spacelab/bootstrap.css" rel="stylesheet">-->
+	<link rel="stylesheet" href="bootstrap/css/flatly/bootstrap.css">
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="bootstrap/js/html5shiv.min.js"></script>
+	<script src="bootstrap/js/respond.min.js"></script>
+	<![endif]-->
+	
+	<!--=== App core ===-->
+	<script type="text/javascript" src="js/controller_rhapi.js"></script>
+	<script type="text/javascript" src="js/class/client_rhapi.js"></script>
+	<script type="text/javascript" src="js/class/menu.js"></script>
+	<script type="text/javascript" src="js/class/search_ccam.js"></script>
+	<script type="text/javascript" src="js/class/medical_act.js"></script>
+</head>
+<body>
+<a href="https://github.com/rhapi-project/CCAM"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
+	<div class="container">
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<span id="menu-logo" class="navbar-brand menu_link">CCAM en ligne</span>
+				</div>
+				<div class="navbar-right">
+					<ul class="nav navbar-nav">
+						<li><a id="menu-app-version" href="#"></a></li>
+						<!--<li class="active"><a href="tarif.html"><span class="glyphicon glyphicon-folder-open"></span> TARIF</a></li>-->
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<main>
+			<!-- #################### -->
+			<!-- Search CCAM area -->
+			<!-- #################### -->
+			<div id="search-ccam-area">
+				<section class="row ">
+					<div class="col-xs-12">
+						<!--<h1>ACCUEIL</h1>-->
+						<form>
+							<div id="input-search-area" class="form-group">
+								<p>
+									<label for="input-search">Recherche d'un acte au </label> <input id="input-search-date" type="text" class="input-search-date" size="10" /><br />
+									<input id="input-search" type="text" class="form-control input-search" />
+									<img src="img/loading_alpha.gif" alt="[Loading content...]" id="input-search-loading-img" style="display: none;">
+									<span class="ui-menu-item" style="display: none;"></span>
+								</p>
+							</div>
+						</form>
+					</div>
+				</section>
+				<div id="results-areas">
+					<table id="results-area" class="table table-bordered" style="display: none;">
+						<caption id="results-area-title"></caption>
+						<tbody id="results-area-2"></tbody>
+					</table>
+					<div id="results-area-loading"></div>
+				</div>
+				<p id="results-loading-area" class="loading-area" style="display: none;">
+					<img src="img/loading_alpha.gif" alt="[Loading content...]" class="results-loading-img">
+				</p>
+				<p>
+					<button id="result-button-more" class="btn-block btn-primary" style="display: none;">
+						<img id="result-button-more-img" src="img/loading_alpha.gif" width="16px" height="16px" alt="[Loading content...]" style="display: none;" /> <span class="result-button-more-text">Plus de résultats</span>
+					</button>
+				</p>
+			</div>
+			
+			<!-- #################### -->
+			<!-- Medical act area -->
+			<!-- #################### -->
+			<section id="medical-act-area" class="row " style="display: none;">
+				<div class="col-xs-12">
+					<p id="medical-act-back" class="link-global">&larr; Retour</p>
+					<h1 id="medical-act-title"></h1>
+					<h2 id="medical-act-subtitle"></h2>
+					<div id="medical-act-notes"></div>
+					<!-- Inputs jQuery -->
+					<!--<div class="input-group">
+						<span class="input-group-addon" id="basic-addon1">Convention PS</span>
+						<select id="medical_act_conventions_ps" class="form-control tag_select"></select>
+						<span id="medical_act_code" style="display: none;"></span>
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon2">DOM</span>
+						<select id="medical_act_dom" class="form-control tag_select"></select>
+					</div>-->
+					
+					<!-- Mes inputs -->
+					<!--<div class="select_input_area">
+						<label for="medical_act_conventions_ps" class="select_input_label">Convention PS</label><select id="medical_act_conventions_ps" class="select_input"></select>
+					</div>
+					<div class="select_input_area">
+						<label for="medical_act_dom" class="select_input_label">DOM</label><select id="medical_act_dom" class="select_input"></select>
+					</div>-->
+					
+					<!-- Mes inputs (2) -->
+					<p class="select-input-area">
+						<label for="medical-act-conventions-ps" class="select-input-label">Convention PS</label><select id="medical-act-conventions-ps" class="select-input"></select>
+					</p>
+					<p class="select-input-area">
+						<label for="medical-act-dom" class="select-input-label">DOM</label><select id="medical-act-dom" class="select-input"></select>
+					</p>
+					<p>
+						<span id="medical-act-price-area">
+							<strong>Tarif :</strong> <span id="medical-act-price" style="display: none;"></span><img id="medical-act-price-loading" src="img/loading_alpha.gif" alt="[Loading content...]" width="16px" height="16px" />
+						</span>
+					</p>
+				</div>
+				<script type="text/javascript" id="medical-act-area-price-script"></script>
+			</section>
+			<p id="medical-act-area-loading" class="loading-area" style="display: none;">
+				<img src="img/loading_alpha.gif" alt="[Loading content...]" class="results-loading-img">
+			</p>
+		</main>
+	</div>
+</body>
+</html>

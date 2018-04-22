@@ -1,0 +1,197 @@
+body{
+	margin: 0px;
+}
+
+.container{
+	
+}
+
+.link-global{
+	color: #17B491;
+	text-decoration: underline;
+	padding: 8px;
+}
+
+.link-global:hover{
+	color: white;
+	background-color: #17B491;
+	cursor: pointer;
+}
+
+/* == Inputs jQuery == */
+/*.input-group-addon{
+	width: 128px;
+}*/
+
+/*.tag_select{
+	min-width: 288px;
+}*/
+
+/*#medical_act_conventions_ps, #medical_act_dom{
+	width: 100%;
+}*/
+
+/* == Mes inputs == */
+/*.select_input_area{
+	padding: 0;
+}
+
+.select_input_label{
+	width: 20%;
+	height: 100%;
+	font-size: 100%;
+	text-align: right;
+	margin: 0;
+	padding: 8px;
+	display: inline-block;
+	background-color: #ECF0F1;
+	word-wrap: break-word;
+}
+
+.select_input{
+	width: 80%;
+	height: 100%;
+	margin: 0;
+	padding: 8px;
+	display: inline-block;
+	border: 2px solid #ECF0F1;
+	vertical-align: top;
+}*/
+
+#menu-logo:hover{
+	cursor: pointer;
+}
+
+#menu-app-version{
+	font-size: x-small;
+}
+
+.select-input-area{
+	padding: 0;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.select-input-label{
+	width: 100%;
+	padding: 8px;
+	margin: 0;
+	background-color: #ECF0F1;
+	border-top: 2px solid #DCE4EC;
+	border-left: 2px solid #DCE4EC;
+	border-right: 2px solid #DCE4EC;
+}
+
+.select-input{
+	width: 100%;
+	margin: 0;
+	padding: 8px;
+	border-top: 2px solid #DCE4EC;
+	border-left: 2px solid #DCE4EC;
+	border-right: 2px solid #DCE4EC;
+	border-bottom: 2px solid #DCE4EC;
+	background-color: white;
+}
+
+.select-input-loading{
+	background-color: #ECF0F1;
+}
+
+.input-search-date{
+	border: 1px solid #DCE4EC;
+	border-radius: 3px 3px 3px 3px;
+}
+
+#input-search{
+	margin-bottom: 0;
+}
+
+#input-search-area{
+	margin: 0;
+	position: relative;
+}
+
+#input-search-area label{
+	height: 22px;
+}
+
+#input-search-loading-img{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 40px;
+	right: 16px;
+	border-radius: 4px 4px 4px 4px;
+}
+
+.ui-autocomplete{
+	margin-top: 0;
+	padding-top: 0;
+}
+
+#results-areas{
+	margin-top: 32px;
+	position: relative;
+}
+
+#results-area-loading{
+	width: 100%;
+	height: 100%;
+	background-color: gray;
+	opacity: 0.3;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.td-result{
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+
+.td-span-result{
+	width: 100%;
+	height: 100%;
+	color: #17B491;
+	text-decoration: underline;
+	padding: 8px;
+	margin: 0;
+	display: block;
+}
+
+.tr-results:hover, .tr-results:hover td span{
+	color: white;
+	background-color: #17B491;
+	cursor: pointer;
+}
+
+.loading-area{
+	text-align: center;
+}
+
+.results-loading-img{
+	width: 32px;
+	height: 32px;
+	border-radius: 8px 8px 8px 8px;
+}
+
+#result-button-more{
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+/* Medical act */
+
+.medical-act-notes{
+	font-size: small;
+}
+
+#medical-act-price{
+	font-size: large;
+}
+
+/*.td_a_result:hover{
+	color: white;
+	background-color: #17B491;
+}*/
