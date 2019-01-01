@@ -47,7 +47,7 @@ class ClientRhapi {
     serverDataUrlPrepare(inputVal, medicalActCode, medicalActActiviteCode, medicalActPhaseCode, medicalActGridCode, medicalActDomCode, medicalActModificatorCode) {
         medicalActActiviteCode = (medicalActActiviteCode != null)?medicalActActiviteCode:"";
         medicalActPhaseCode = (medicalActPhaseCode != null)?medicalActPhaseCode:"";
-        var urlStart = "http://localhost";
+        var urlStart = "https://demo.rhapi.net/demo01";
         var urlKeyword = urlStart + "/CCAM/?texte=" + inputVal;
         var urlMedicalAct = urlStart + "/CCAM/" + medicalActCode;
         //var urlMedicalActActivitePhaseCodes = ;
